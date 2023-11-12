@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/mainlayout.astro'
+import Showcase from '../components/showcase.astro';
+import virkistysalueet from '../images/virkistymisalueet.jpg'
+import pelastuslaitos from '../images/pelastuslaitos.jpg'
+import { Image } from 'astro:assets';
+---
+
+
+<header class="header">
+
+    <div class="otsikko">
+        <a href="/">
+            <h1>Peppi Sundell</h1>
+        </a>
+    </div>
+
+    <div class="grid grid-cols-4 gap-0">
+        <a href="/">
+            <div class="test" id="koti">
+                <p>Home</p>
+            </div>
+        </a>
+
+        <a href="/aboutMe">
+            <div class="test" id="minusta">
+                <p>About me</p>
+            </div>
+        </a>
+        
+        <a href="/code">
+            <div class="test" id="koodi">
+                <p>Code</p>
+            </div>
+        </a>
+
+        <a href="/maps">
+            <div class="test" id="kartat">
+                <p>Maps</p>
+            </div>
+        </a>
+        
+    </div>
+
+</header>
+
+<Layout>
+    <div class="pretext">
+        <p>
+            Unfortunately some of the maps I have made are only in Finnish. I how ever will try to do
+            my best to explain the maps even though you might not understand the text in the maps.
+        </p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2" id="grid">
+        <div class="image">
+            <Image src={virkistysalueet} alt="">
+        </div>
+        <div class="text">
+            <p>
+                Map of Hameenlinna's recreation areas. This includes all nature areas categorised 
+                by their types. 
+            </p>
+        </div>
+        <div class="image">
+            <Image src={pelastuslaitos} alt="">
+        </div>
+        <div class="text">
+            <p>
+                Map of Helsinki's 
+            </p>
+        </div>
+    </div>
+
+</Layout>
+
+
+<style>
+
+    body {
+        background-color: rgb(230, 230, 230);
+    }
+
+    .text {
+        text-align: center;
+        padding: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        border: 1px solid rgb(57, 57, 57);
+        font-size: 20px;
+    }
+
+    .image {
+        border: 1px solid rgb(57, 57, 57);
+        padding: 10px;
+    }
+
+    .pretext {
+        text-align: center;
+        padding: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        border: 1px solid rgb(57, 57, 57);
+        font-size: 20px;
+    }
+
+    img {
+        border: 1.5px solid rgb(57, 57, 57);
+    }
+
+    .header {
+        background-color: rgb(230, 230, 230);
+    }
+
+    .header .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+
+    .test:hover {
+        background-color: rgb(57, 57, 57);
+        color: rgb(230, 230, 230);
+    }
+
+    .otsikko {
+        text-align: center;
+        color: rgb(57, 57, 57);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 60px;
+        padding: 20px;
+        border: 1px solid rgb(57, 57, 57);
+        transition: 0.3s;
+    }
+
+    .test {
+        border: 1px solid rgb(57, 57, 57);
+        text-align: center;
+        color: rgb(57, 57, 57);
+        font-size: 25px;
+        font-family: 'Times New Roman', Times, serif;
+        transition: 0.3s;
+    }
+
+    .otsikko:hover {
+        background-color: rgb(57, 57, 57);
+        color: rgb(230, 230, 230);
+    }
+
+    #kartat {
+        background-color: rgb(90,90,90);
+        color: rgb(230, 230, 230);
+    }
+
+    #kartat:hover {
+        background-color: rgb(57, 57, 57);
+    }
+
+
+</style>
