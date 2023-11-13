@@ -47,8 +47,9 @@ import { Image } from 'astro:assets';
 <Layout>
     <div class="pretext">
         <p>
-            Unfortunately some of the maps I have made are only in Finnish. I how ever will try to do
-            my best to explain the maps even though you might not understand the text in the maps.
+            Unfortunately, some of the maps I have made are only in Finnish. I will however try to do
+            my best to explain them to non-Finnish speakers as well. Descriptions of the maps will be 
+            next to or under the images.
         </p>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2" id="grid">
@@ -57,8 +58,10 @@ import { Image } from 'astro:assets';
         </div>
         <div class="text">
             <p>
-                Map of Hameenlinna's recreation areas. This includes all nature areas categorised 
-                by their types. 
+                Map of Hameenlinna's recreation areas. This includes all nature areas categorized 
+                by their types. Some of the types are: park, cemetery and field. The map was made 
+                to analyze the need for recreation areas in Hameenlinna. The map was made with QGIS.
+
             </p>
         </div>
         <div class="image">
@@ -66,7 +69,11 @@ import { Image } from 'astro:assets';
         </div>
         <div class="text">
             <p>
-                Map of Helsinki's 
+                Map of Helsinki's rescue departments. The map represents how many people live in a 
+                certain rescue department's area. The most people live in Haaga's rescue department 
+                area (122627 people) and the least live in Herttoniemi's area (68144 people). The 
+                yellow dots represent the locations of the rescue departments. The map was made with 
+                QGIS.
             </p>
         </div>
     </div>
@@ -90,15 +97,15 @@ import { Image } from 'astro:assets';
 
     .image {
         border: 1px solid rgb(57, 57, 57);
-        padding: 10px;
+        padding: 7px;
     }
 
     .pretext {
         text-align: center;
-        padding: 50px;
+        padding: 70px;
         font-family: 'Times New Roman', Times, serif;
-        border: 1px solid rgb(57, 57, 57);
-        font-size: 20px;
+        border: 4px double rgb(57, 57, 57);
+        font-size: 23px;
     }
 
     img {

@@ -1,10 +1,17 @@
+---
+import gmail from '../images/gmail.jpg'
+import { Image } from 'astro:assets';
+---
+
+
+
 
 <footer class="footer">
 
     <div class="container">
         <nav>
             <ul>
-                <li>Contact me at:  <b>peppi.sundell@gmail.com</b></li>
+                <li>Contact me at:  <Image src={gmail} alt=""></li>
             </ul>
         </nav>
     </div>
@@ -14,7 +21,7 @@
 <style>
     
     .footer {
-        height: 70px;
+        height: 80px;
         background-color: rgb(230, 230, 230);
         border: 1px solid rgb(57, 57, 57);
     }
@@ -28,7 +35,7 @@
     }
 
     .footer img {
-        height: 70px;
+        height: 30px;
         width: auto;
         vertical-align: middle;
     }
