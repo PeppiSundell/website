@@ -1,21 +1,21 @@
 ---
-import Layout from '../layouts/mainlayout.astro'
-import Showcase from '../components/showcase.astro';
-import { Image } from 'astro:assets';
-import github from "../images/github.jpg"
-import sormi from "../images/sormi.jpg"
+import Layout from "../layouts/mainlayout.astro";
+import Showcase from "../components/showcase.astro";
+import { Image } from "astro:assets";
+import github from "../images/github.jpg";
+import sormi from "../images/sormi.jpg";
 export interface Props {
     heading?: string;
 }
 
-const {heading = "Peppi Sundell"} = Astro.props as Props;
+const { heading = "Peppi Sundell" } = Astro.props as Props;
 ---
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <header class="header">
-
     <div class="otsikko">
         <a href="/">
             <h1>Peppi Sundell</h1>
@@ -34,7 +34,7 @@ const {heading = "Peppi Sundell"} = Astro.props as Props;
                 <p>Me</p>
             </div>
         </a>
-        
+
         <a href="/code">
             <div class="test" id="koodi">
                 <p>Code</p>
@@ -46,140 +46,125 @@ const {heading = "Peppi Sundell"} = Astro.props as Props;
                 <p>Maps</p>
             </div>
         </a>
-        
     </div>
-
 </header>
 
 <Layout>
+    <section class="showcase2">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+            <a href="https://github.com/PeppiSundell/website">
+                <div class="grid grid-cols-2 gap-2" id="moi">
+                    <div>
+                        <p>Code for this website</p>
+                    </div>
+                    <div class="flex justify-center">
+                        <Image class="images" src={sormi} alt="" />
+                    </div>
+                </div>
+                <a href="https://github.com/PeppiSundell">
+                    <div class="grid grid-cols-2 gap-2" id="moi">
+                        <div>
+                            <p>My GitHub</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <Image class="images" src={github} alt="" />
+                        </div>
+                    </div>
+                </a>
+            </a>
+        </div>
 
-<section class="showcase2">
-    <div class="grid grid-cols-1 lg:grid-cols-2">
-        <a href="https://github.com/PeppiSundell/website">
-            <div class="grid grid-cols-2 gap-2" id="moi">
-                <div>
-                    <p>
-                        Code for this website
-                    </p>
-                </div>
-                <div class="images">
-                    <Image src={sormi} alt="">
-                </div>
-            </div>
-        </a>    
-        <a href="https://github.com/PeppiSundell">
-            <div class="grid grid-cols-2 gap-2" id="moi">
-                <div>
-                    <p>
-                        My GitHub
-                    </p>
-                </div>
-                <div class="images">
-                    <Image src={github} alt="">
-                </div>
-            </div>
-        </a>
+        <style>
+            body {
+                background-color: rgb(230, 230, 230);
+            }
 
-    </div>
-</section>
-   
+            body {
+                background-color: rgb(230, 230, 230);
+            }
+
+            .showcase {
+                background-color: rgb(230, 230, 230);
+            }
+
+            .showcase2 {
+                background-color: rgb(57, 57, 57);
+            }
+
+            .grid {
+                background-color: rgb(230, 230, 230);
+            }
+
+            #moi {
+                font-family: "Times New Roman", Times, serif;
+                font-size: 25px;
+                padding: 20px;
+                text-align: center;
+                align-items: center;
+                border: 1px solid rgb(57, 57, 57);
+                transition: 0.3s;
+            }
+
+            #moi:hover {
+                background: rgb(57, 57, 57);
+                color: rgb(230, 230, 230);
+                padding: 40px;
+            }
+
+            .images {
+                border: 4px double rgb(57, 57, 57);
+                height:;
+            }
+
+            .header {
+                background-color: rgb(230, 230, 230);
+            }
+
+            .header .container {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+            }
+
+            .test:hover {
+                background-color: rgb(57, 57, 57);
+                color: rgb(230, 230, 230);
+            }
+
+            .otsikko {
+                text-align: center;
+                color: rgb(57, 57, 57);
+                font-family: "Times New Roman", Times, serif;
+                font-size: 60px;
+                padding: 20px;
+                border: 1px solid rgb(57, 57, 57);
+                transition: 0.3s;
+            }
+
+            .test {
+                border: 1px solid rgb(57, 57, 57);
+                text-align: center;
+                color: rgb(57, 57, 57);
+                font-size: 25px;
+                font-family: "Times New Roman", Times, serif;
+                transition: 0.3s;
+            }
+
+            .otsikko:hover {
+                background-color: rgb(57, 57, 57);
+                color: rgb(230, 230, 230);
+            }
+
+            #koodi {
+                background-color: rgb(90, 90, 90);
+                color: rgb(230, 230, 230);
+            }
+
+            #koodi:hover {
+                background-color: rgb(57, 57, 57);
+            }
+        </style>
+    </section>
 </Layout>
-
-<style>
-
-    body {
-        background-color: rgb(230, 230, 230);
-    }
-
-    body{
-        background-color: rgb(230, 230, 230);
-    }
-
-    .showcase {
-        background-color: rgb(230, 230, 230);
-    }
-
-    .showcase2{
-        background-color: rgb(57, 57, 57);
-    }
-
-    
-    .grid {
-        background-color: rgb(230, 230, 230);
-    }
-
-    #moi {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 25px;
-        padding: 20px;
-        text-align: center;
-        align-items: center;
-        border: 1px solid rgb(57, 57, 57);
-        transition: 0.3s;
-    }
-
-    #moi:hover {
-        background: rgb(57, 57, 57);
-        color: rgb(230, 230, 230);
-        padding: 40px;
-    }
-
-    .images {
-        border: 4px double rgb(57, 57, 57);
-        height: ;
-    }
-
-    .header {
-        background-color: rgb(230, 230, 230);
-    }
-
-    .header .container {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-    }
-
-
-    .test:hover {
-        background-color: rgb(57, 57, 57);
-        color: rgb(230, 230, 230);
-    }
-
-    .otsikko {
-        text-align: center;
-        color: rgb(57, 57, 57);
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 60px;
-        padding: 20px;
-        border: 1px solid rgb(57, 57, 57);
-        transition: 0.3s;
-    }
-
-    .test {
-        border: 1px solid rgb(57, 57, 57);
-        text-align: center;
-        color: rgb(57, 57, 57);
-        font-size: 25px;
-        font-family: 'Times New Roman', Times, serif;
-        transition: 0.3s;
-    }
-
-    .otsikko:hover {
-        background-color: rgb(57, 57, 57);
-        color: rgb(230, 230, 230);
-    }
-
-    #koodi {
-        background-color: rgb(90,90,90);
-        color: rgb(230, 230, 230);
-    }
-
-    #koodi:hover {
-        background-color: rgb(57, 57, 57);
-    }
-
-
-</style>
-
