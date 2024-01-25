@@ -1,9 +1,9 @@
 ---
+
 ---
 
 <header class="header">
-
-    <div class="otsikko">
+    <div class="headline">
         <a href="/">
             <h1>Peppi Sundell</h1>
         </a>
@@ -11,35 +11,32 @@
 
     <div class="grid grid-cols-4 gap-0">
         <a href="/">
-            <div class="test" id="koti">
+            <div class="navigation" id="home">
                 <p>Home</p>
             </div>
         </a>
 
-        <a href="/aboutMe">
-            <div class="test" id="minusta">
+        <a href="/me">
+            <div class="navigation" id="me">
                 <p>About me</p>
             </div>
         </a>
-        
+
         <a href="/code">
-            <div class="test" id="koodi">
+            <div class="navigation" id="code">
                 <p>Code</p>
             </div>
         </a>
 
         <a href="/maps">
-            <div class="test" id="kartat">
+            <div class="navigation" id="maps">
                 <p>Maps</p>
             </div>
         </a>
-        
     </div>
-
 </header>
 
 <style>
-    
     .header {
         background-color: rgb(230, 230, 230);
     }
@@ -52,34 +49,32 @@
         padding: 20px;
     }
 
-
     .test:hover {
         background-color: rgb(57, 57, 57);
         color: rgb(230, 230, 230);
     }
 
-    .otsikko {
+    .headline {
         text-align: center;
         color: rgb(57, 57, 57);
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Times New Roman", Times, serif;
         font-size: 60px;
         padding: 20px;
         border: 1px solid rgb(57, 57, 57);
         transition: 0.3s;
     }
 
-    .test {
+    .navigation {
         border: 1px solid rgb(57, 57, 57);
         text-align: center;
         color: rgb(57, 57, 57);
         font-size: 25px;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Times New Roman", Times, serif;
         transition: 0.3s;
     }
 
-    .otsikko:hover {
+    .headline:hover {
         background-color: rgb(57, 57, 57);
         color: rgb(230, 230, 230);
     }
-
 </style>

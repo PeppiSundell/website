@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import code from "../images/bina.jpg";
-import aboutMe from "../images/aboutMe.jpg";
+import Me from "../images/aboutMe.jpg";
 import maps from "../images/map-modified.jpg";
 export interface Props {
     heading?: string;
@@ -12,17 +12,17 @@ const { heading = "Peppi Sundell" } = Astro.props as Props;
 
 <section class="showcase2">
     <div class="grid grid-cols-1 lg:grid-cols-2">
-        <a href="/aboutMe">
-            <div class="grid grid-cols-2 gap-2" id="moi">
+        <a href="/me">
+            <div class="grid grid-cols-2 gap-2" id="grid">
                 <div>
                     <p>More about me</p>
                 </div>
                 <div class="flex justify-center">
-                    <Image class="images" src={aboutMe} alt="" />
+                    <Image class="images" src={Me} alt="" />
                 </div>
             </div>
             <a href="/code">
-                <div class="grid grid-cols-2 gap-2" id="moi">
+                <div class="grid grid-cols-2 gap-2" id="grid">
                     <div>
                         <p>Coding projects I have done</p>
                     </div>
@@ -32,7 +32,7 @@ const { heading = "Peppi Sundell" } = Astro.props as Props;
                 </div>
 
                 <a href="/maps">
-                    <div class="grid grid-cols-2 gap-2" id="moi">
+                    <div class="grid grid-cols-2 gap-2" id="grid">
                         <div>
                             <p>Maps I have made</p>
                         </div>
@@ -60,7 +60,7 @@ const { heading = "Peppi Sundell" } = Astro.props as Props;
                     background-color: rgb(230, 230, 230);
                 }
 
-                #moi {
+                #grid {
                     font-family: "Times New Roman", Times, serif;
                     font-size: 25px;
                     padding: 20px;
@@ -70,7 +70,7 @@ const { heading = "Peppi Sundell" } = Astro.props as Props;
                     transition: 0.3s;
                 }
 
-                #moi:hover {
+                #grid:hover {
                     background: rgb(57, 57, 57);
                     color: rgb(230, 230, 230);
                     padding: 40px;

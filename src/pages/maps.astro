@@ -1,17 +1,17 @@
 ---
-import Layout from '../layouts/mainlayout.astro'
-import Showcase from '../components/showcase.astro';
-import virkistysalueet from '../images/virkistymisalueet.jpg'
-import pelastuslaitos from '../images/pelastuslaitos.jpg'
-import { Image } from 'astro:assets';
+import Layout from "../layouts/mainlayout.astro";
+import Showcase from "../components/showcase.astro";
+import recreationareas from "../images/recreationareas.jpg";
+import rescuedepartments from "../images/rescuedepartments.jpg";
+import { Image } from "astro:assets";
 ---
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <header class="header">
-
-    <div class="otsikko">
+    <div class="headline">
         <a href="/">
             <h1>Peppi Sundell</h1>
         </a>
@@ -19,151 +19,145 @@ import { Image } from 'astro:assets';
 
     <div class="grid grid-cols-4 gap-0">
         <a href="/">
-            <div class="test" id="koti">
+            <div class="navigation" id="home">
                 <p>Home</p>
             </div>
         </a>
 
-        <a href="/aboutMe">
-            <div class="test" id="minusta">
+        <a href="/me">
+            <div class="navigation" id="me">
                 <p>Me</p>
             </div>
         </a>
-        
+
         <a href="/code">
-            <div class="test" id="koodi">
+            <div class="navigation" id="code">
                 <p>Code</p>
             </div>
         </a>
 
         <a href="/maps">
-            <div class="test" id="kartat">
+            <div class="navigation" id="maps">
                 <p>Maps</p>
             </div>
         </a>
-        
     </div>
-
 </header>
 
 <Layout>
     <div class="pretext">
         <p>
-            Unfortunately, some of the maps I have made are only in Finnish. I will however try to do
-            my best to explain them to non-Finnish speakers as well. Descriptions of the maps will be 
-            next to or under the images.
+            Unfortunately, some of the maps I have made are only in Finnish. I
+            will however try to do my best to explain them to non-Finnish
+            speakers as well. Descriptions of the maps will be next to or under
+            the images.
         </p>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2" id="grid">
         <div class="image">
-            <Image src={virkistysalueet} alt="">
+            <Image src={recreationareas} alt="" />
         </div>
         <div class="text">
             <p>
-                Map of Hameenlinna's recreation areas. This includes all nature areas categorized 
-                by their types. Some of the types are: park, cemetery and field. The map was made 
-                to analyze the need for recreation areas in Hameenlinna. The map was made with QGIS.
-
+                Map of Hameenlinna's recreation areas. This includes all nature
+                areas categorized by their types. Some of the types are: park,
+                cemetery and field. The map was made to analyze the need for
+                recreation areas in Hameenlinna. The map was made with QGIS.
             </p>
         </div>
         <div class="image">
-            <Image src={pelastuslaitos} alt="">
+            <Image src={rescuedepartments} alt="" />
         </div>
         <div class="text">
             <p>
-                Map of Helsinki's rescue departments. The map represents how many people live in a 
-                certain rescue department's area. The most people live in Haaga's rescue department 
-                area (122627 people) and the least live in Herttoniemi's area (68144 people). The 
-                yellow dots represent the locations of the rescue departments. The map was made with 
-                QGIS.
+                Map of Helsinki's rescue departments. The map represents how
+                many people live in a certain rescue department's area. The most
+                people live in Haaga's rescue department area (122627 people)
+                and the least live in Herttoniemi's area (68144 people). The
+                yellow dots represent the locations of the rescue departments.
+                The map was made with QGIS.
             </p>
         </div>
+
+        <style>
+            body {
+                background-color: rgb(230, 230, 230);
+            }
+
+            .text {
+                text-align: center;
+                padding: 50px;
+                font-family: "Times New Roman", Times, serif;
+                border: 1px solid rgb(57, 57, 57);
+                font-size: 20px;
+            }
+
+            .image {
+                border: 1px solid rgb(57, 57, 57);
+                padding: 7px;
+            }
+
+            .pretext {
+                text-align: center;
+                padding: 70px;
+                font-family: "Times New Roman", Times, serif;
+                border: 4px double rgb(57, 57, 57);
+                font-size: 23px;
+            }
+
+            img {
+                border: 1.5px solid rgb(57, 57, 57);
+            }
+
+            .header {
+                background-color: rgb(230, 230, 230);
+            }
+
+            .header .container {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+            }
+
+            .navigation:hover {
+                background-color: rgb(57, 57, 57);
+                color: rgb(230, 230, 230);
+            }
+
+            .headline {
+                text-align: center;
+                color: rgb(57, 57, 57);
+                font-family: "Times New Roman", Times, serif;
+                font-size: 60px;
+                padding: 20px;
+                border: 1px solid rgb(57, 57, 57);
+                transition: 0.3s;
+            }
+
+            .navigation {
+                border: 1px solid rgb(57, 57, 57);
+                text-align: center;
+                color: rgb(57, 57, 57);
+                font-size: 25px;
+                font-family: "Times New Roman", Times, serif;
+                transition: 0.3s;
+            }
+
+            .headline:hover {
+                background-color: rgb(57, 57, 57);
+                color: rgb(230, 230, 230);
+            }
+
+            #maps {
+                background-color: rgb(90, 90, 90);
+                color: rgb(230, 230, 230);
+            }
+
+            #maps:hover {
+                background-color: rgb(57, 57, 57);
+            }
+        </style>
     </div>
-
 </Layout>
-
-
-<style>
-
-    body {
-        background-color: rgb(230, 230, 230);
-    }
-
-    .text {
-        text-align: center;
-        padding: 50px;
-        font-family: 'Times New Roman', Times, serif;
-        border: 1px solid rgb(57, 57, 57);
-        font-size: 20px;
-    }
-
-    .image {
-        border: 1px solid rgb(57, 57, 57);
-        padding: 7px;
-    }
-
-    .pretext {
-        text-align: center;
-        padding: 70px;
-        font-family: 'Times New Roman', Times, serif;
-        border: 4px double rgb(57, 57, 57);
-        font-size: 23px;
-    }
-
-    img {
-        border: 1.5px solid rgb(57, 57, 57);
-    }
-
-    .header {
-        background-color: rgb(230, 230, 230);
-    }
-
-    .header .container {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-    }
-
-
-    .test:hover {
-        background-color: rgb(57, 57, 57);
-        color: rgb(230, 230, 230);
-    }
-
-    .otsikko {
-        text-align: center;
-        color: rgb(57, 57, 57);
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 60px;
-        padding: 20px;
-        border: 1px solid rgb(57, 57, 57);
-        transition: 0.3s;
-    }
-
-    .test {
-        border: 1px solid rgb(57, 57, 57);
-        text-align: center;
-        color: rgb(57, 57, 57);
-        font-size: 25px;
-        font-family: 'Times New Roman', Times, serif;
-        transition: 0.3s;
-    }
-
-    .otsikko:hover {
-        background-color: rgb(57, 57, 57);
-        color: rgb(230, 230, 230);
-    }
-
-    #kartat {
-        background-color: rgb(90,90,90);
-        color: rgb(230, 230, 230);
-    }
-
-    #kartat:hover {
-        background-color: rgb(57, 57, 57);
-    }
-
-
-</style>
